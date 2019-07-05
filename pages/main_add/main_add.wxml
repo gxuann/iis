@@ -1,0 +1,34 @@
+<!--pages/main_add/main_add.wxml-->
+<view class="frame-title">
+  <view class="title-name">添加商品</view>
+  <view class="title-text">在这里，你需要先录入商品的详细信息，稍后可以在
+    <text class="bold"> 操作中心 </text>页面进行其他操作。</view>
+</view>
+<form class="main-add" bindsubmit="mainAdd">
+  <view class="cu-form-group">
+    <view class="title">商品名称</view>
+    <input name="maName" placeholder="请输入商品名称" confirm-type="next" value="{{name}}"></input>
+  </view>
+  <view class="cu-form-group">
+    <view class="title">登记编号</view>
+    <input name="maNumber" placeholder="请输入登记编号" type="number" confirm-type="next" value="{{name}}" bindblur="checkRegNumber"></input>
+  </view>
+  <view class="cu-form-group">
+    <view class="title">厂家名称</view>
+    <input name="maFactory" placeholder="请输入厂家名" confirm-type="next" value="{{name}}"></input>
+  </view>
+  <view class="cu-form-group">
+    <view class="title">存储仓库</view>
+    <input name="maRepo" placeholder="{{placeholder}}" disabled="true" confirm-type="next" value="{{defaultStoreName}}" bindtap="onPciker"></input>
+    <van-popup show="{{ show }}" position="bottom" bind:close="onClose">
+      <van-picker columns="{{ storeNameList }}" default-index="{{ 2 }}" bind:confirm="onChange" bind:cancel="onClose" show-toolbar="true" title="请选择…" confirm-button-text="确认"/>
+    </van-popup>
+  </view>
+  <view class="cu-form-group">
+    <view class="title">现有库存</view>
+    <input name="maStore" placeholder="请输入现有库存（可以为0）" type="number" confirm-type="next" value="{{name}}"></input>
+  </view>
+  <button class="cu-btn block bg-cyan margin-tb-sm user-form-button" form-type="submit">提交
+  </button>
+</form>
+<van-notify id="custom-selector" />

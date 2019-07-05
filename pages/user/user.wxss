@@ -1,0 +1,77 @@
+/* pages/user/user.wxss */
+.user-card{
+  justify-content: space-around;
+  margin: 50rpx;
+  border: solid 0.5rpx #eaeaea;
+  border-radius: 15rpx;
+  box-shadow: 1rpx 2rpx 50rpx 5rpx #eaeaea;
+}
+
+.user-info{
+  display: flex;
+  margin: 20rpx 20rpx 20rpx 0 ;
+  align-items: center;
+  opacity: 0.9;
+  height: 95rpx;
+  flex-shrink: 0;
+}
+.user-head{
+  margin: 20rpx;
+  flex-shrink: 0;
+  border-radius: 50%;
+  height: 70rpx;
+  width: 70rpx;
+}
+.user-name{
+  margin: 50rpx 0 20rpx 0;
+  flex-shrink: 0;
+  height: 70rpx;
+  width: 140rpx;
+  opacity: 0.9;
+  font-size: 30rpx;
+  text-align: center;
+}
+.user-name-1{
+  margin: 50rpx 0 -40rpx 30rpx ;
+  flex-shrink: 0;
+  height: 70rpx;
+  opacity: 0.9;
+  text-align: center;
+  font-size: 25rpx;
+}
+.line{
+  margin-left: 5%;
+  margin-right: 5%;
+  background-color: #eaeaea;
+  height: 0.5rpx;
+}
+
+.user-real-info{
+  margin: 30rpx 110rpx;
+  font-size: 25rpx;
+}
+
+.pro-tip{
+  display: block;
+  text-align: center;
+  font-size: 20rpx;
+  color: #333333;
+  margin-top: 150rpx;
+}
+.pro-grid{
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 90%;
+  margin: 30rpx 5% 5%;
+}
+.pro-grid-item{
+  flex: 0 0 auto;
+  width: 33.3%;
+  text-align: center;
+  color: #333333;
+  padding: 40rpx 0;
+  font-size: 25rpx;
+}

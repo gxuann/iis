@@ -1,0 +1,16 @@
+<!--pages/addStore/addStore.wxml-->
+<view class="frame-title">
+  <view class="title-name">添加仓库</view>
+  <view class="title-text">在这里，你可以根据后续业务需要在此添加新的仓库名称，这里的仓库名称会在添加商品的时候用到。</view>
+</view>
+
+<form class="add-store-form" bindsubmit="addStoreName">
+  <view class="cu-form-group">
+    <view class="title">仓库名称</view>
+    <input name="store" placeholder="请输入新的仓库名称" value="{{store}}"></input>
+  </view>
+  <button class="cu-btn block bg-orange margin-tb-sm user-form-button" form-type="submit">提交
+  </button>
+</form>
+<van-toast id="van-toast" />
+<van-notify id="custom-selector" />

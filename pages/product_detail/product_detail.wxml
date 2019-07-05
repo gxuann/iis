@@ -1,0 +1,37 @@
+<!--pages/product_detail/product_detail.wxml-->
+<view class="product-tip">以下是商品详细信息：</view>
+<view class="product-card">
+  <view class="align-center product-card-detail">
+    <view class="product-detail">
+      <view class="product-name">{{productDetail[0].name}}</view>
+      <view class="product-info">注册编号：{{productDetail[0].number}}</view>
+      <view class="product-info">厂家名称：{{productDetail[0].factory}}</view>
+      <view class="product-info">存储仓库：{{productDetail[0].repo}}</view>
+    </view>
+    <view class="product-store">
+      <view>当前库存</view>
+      <view class="store">{{productDetail[0].store}}</view>
+    </view>
+  </view>
+</view>
+<view class="opt-tip">以下是该商品的操作记录：</view>
+
+<view class="opt-card shadow-warp">
+  <view class="opt-title">
+    <view>操作者</view>
+    <view>操作时间</view>
+    <view>状态</view>
+  </view>
+  <scroll-view scroll-y="true" style="height: 500rpx">
+    <view class="opt-detail" wx:for="{{optList}}" wx:key="id">
+      <view>{{item.name}}</view>
+      <view>{{item.date}}</view>
+      <view>
+        <van-tag wx:if="{{item.storeSta==1}}" size="large" color="#8dc63f">入库 {{item.store}}</van-tag>
+        <van-tag wx:else="{{item.storeSta==0}}" size="large" color="#39b54a">出库 {{item.store}}</van-tag>
+      </view>
+    </view>
+    <view class="no-opt-tip" wx:if="{{noOpt==1}}">无操作记录…</view>
+  </scroll-view>
+</view>
+<van-notify id="custom-selector" />

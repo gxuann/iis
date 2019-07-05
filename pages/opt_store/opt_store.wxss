@@ -1,0 +1,42 @@
+/* pages/opt_store/opt_store.wxss */
+page{
+  background: #f1f1f1;
+}
+
+.product-card{
+  justify-content: space-around;
+  margin: 50rpx;
+  border: solid 0.5rpx #eaeaea;
+  border-radius: 15rpx;
+  box-shadow: 1rpx 2rpx 50rpx 5rpx #eaeaea;
+  background-color: #fff;
+}
+.product-card-detail{
+  padding: 30rpx;
+  font-size: 30rpx;
+  display: flex;
+}
+.product-detail{
+  border-right: solid #eaeaea 2rpx;
+  width: 70%;
+}
+.product-name{
+  font-size: 40rpx;
+  font-weight: bolder;
+  margin-bottom: 15rpx;
+}
+.product-store{
+  margin: auto;
+  text-align: center;
+}
+.store{
+  margin-top: 10rpx;
+  font-size: 35rpx;
+  font-weight: bold;
+}
+
+.opt-form{
+  position: absolute;
+  width: 650rpx;
+  margin-left: 50rpx;
+}

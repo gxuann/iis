@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "van-notice-bar": "../../vantui/notice-bar/index"
+  }
+}

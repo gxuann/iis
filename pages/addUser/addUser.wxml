@@ -1,0 +1,42 @@
+<!--pages/addUser/addUser.wxml-->
+<view class="frame-title">
+  <view class="title-name">添加用户</view>
+  <view class="title-text">在这里，你可以向系统数据库中添加新的用户信息，这包括用户的真实姓名、工号以及是否是管理员。</view>
+</view>
+
+<form class="add-user-form" bindsubmit="toUpdate">
+  <view class="cu-form-group">
+    <view class="title">姓名</view>
+    <input name="name" placeholder="请输入姓名" confirm-type="next" value="{{name}}"></input>
+  </view>
+  <view class="cu-form-group">
+    <view class="title">工号</view>
+    <input name="num" placeholder="请输入工号" type="number"  value="{{num}}"></input>
+  </view>
+  <view class="cu-form-group">
+    <view class="title">管理员权限</view>
+    <switch name="adminSta"></switch>
+  </view>
+  <button class="cu-btn block bg-orange margin-tb-sm user-form-button" form-type="submit">提交
+  </button>
+</form>
+<view class="radius shadow-warp bg-white res-user-info" hidden="{{reshidden}}">
+  <view class="cu-form-group">
+    <view>已添加以下信息到数据库中：</view>
+  </view>
+  <view class="cu-form-group">
+    <view>姓名</view>
+    <view>{{resname}}</view>
+  </view>
+  <view class="cu-form-group">
+    <view>工号</view>
+    <view>{{resnum}}</view>
+  </view>
+  <view class="cu-form-group">
+    <view>管理员权限</view>
+    <view>{{resadmin}}</view>
+  </view>
+</view>
+
+<van-toast id="van-toast" />
+<van-notify id="custom-selector" />

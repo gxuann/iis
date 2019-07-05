@@ -1,0 +1,26 @@
+<!--pages/updateNotice/updateNotice.wxml-->
+<view class="frame-title">
+  <view class="title-name">更新通知</view>
+  <view class="title-text">在这里，你可以向系统数据库中更新一条新通知，这条通知会显示在操作中心的顶部，所用用户都可见。</view>
+</view>
+
+<form class="update-notice-form" bindsubmit="toUpdate">
+  <view class="cu-form-group">
+    <view class="title">通知内容</view>
+    <textarea data-placeholder="请在此处输入通知内容。" maxlength="-1" disabled="{{modalName!=null}}" placeholder-class="placeholder" class="{{textareaValue?'value':''}}" bindinput="textareaInput"></textarea>
+  </view>
+  <button class="cu-btn block bg-orange margin-tb-sm user-form-button" form-type="submit">提交
+  </button>
+</form>
+<view class="radius shadow-warp bg-white res-user-info" hidden="{{reshidden}}">
+  <view class="cu-form-group">
+    <view>已添加以下信息到数据库中：</view>
+  </view>
+  <view class="cu-form-group">
+    <view>通知内容</view>
+    <view>{{resNoticeText}}</view>
+  </view>
+</view>
+
+<van-toast id="van-toast" />
+<van-notify id="custom-selector" />

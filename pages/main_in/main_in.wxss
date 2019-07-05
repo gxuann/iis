@@ -1,0 +1,40 @@
+/* pages/main_in/main_in.wxss */
+page{
+  background-color: #f1f1f1
+}
+.search-bar{
+  padding-bottom: 30rpx;
+}
+.product-list{
+  background-color: #fff;
+  height: 150rpx;
+  border-radius: 10rpx;
+  margin: 30rpx 20rpx 20rpx;
+  display: flex;
+  position: relative;
+  border-bottom: solid 1rpx #eaeaea;
+}
+.product-list-detail{
+  padding: 30rpx;
+}
+.product-list-name{
+  font-weight: bold;
+  font-size: 35rpx;
+  line-height: 50rpx;
+  margin-bottom: 10rpx;
+}
+.product-list-more{
+  margin: 50rpx 10rpx 50rpx auto;
+}
+
+.product-list-tips{
+  margin-top: 40rpx;
+  display: flex;
+  justify-content: center;
+  font-size: 20rpx;
+  line-height: 28rpx;
+  color: #aaa;
+}
+.product-list-tips-text{
+  margin-left: 10rpx;
+}

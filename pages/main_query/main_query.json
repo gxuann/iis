@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "van-search": "../../vantui/search/index"
+  }
+}

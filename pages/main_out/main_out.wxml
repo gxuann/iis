@@ -1,0 +1,21 @@
+<!--pages/main_out/main_out.wxml-->
+<van-search
+  value="{{ searchValue }}" 
+  placeholder="请输入搜索关键词"
+  bind:search="queryProduct" 
+/>
+
+<scroll-view>
+  <view class="product-list" wx:for="{{productList}}" wx:key="id" bindtap="toProductDetail" data-number="{{item.number}}">
+    <view class="product-list-detail">
+      <view class="product-list-name">商品名称：{{item.name}}</view>
+      <view class="product-list-number">注册编号：{{item.number}}</view>
+    </view>
+    <view class="product-list-more">
+      <van-icon name="ascending" size="50rpx" />
+    </view>
+  </view>
+  <view class="product-list-tips">
+  <van-icon name="info-o" size='27rpx'/><view class="product-list-tips-text">没有更多了~</view>
+  </view>
+</scroll-view>

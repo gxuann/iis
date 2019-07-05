@@ -1,0 +1,103 @@
+{
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"autoAudits": false
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.6.0",
+	"appid": "wxa108c9a7bd0eb47f",
+	"projectname": "inventory-information-system",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"isGameTourist": false,
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 7,
+			"list": [
+				{
+					"id": 0,
+					"name": "主界面",
+					"pathName": "pages/main/main",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "添加用户",
+					"pathName": "pages/addUser/addUser",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "添加通知",
+					"pathName": "pages/updateNotice/updateNotice",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "main_query",
+					"pathName": "pages/main_query/main_query",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "main_add",
+					"pathName": "pages/main_add/main_add",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "添加仓库",
+					"pathName": "pages/addStore/addStore",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 6,
+					"name": "详情和状态",
+					"pathName": "pages/product_detail/product_detail",
+					"query": "number=19050410001",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "main_in",
+					"pathName": "pages/main_in/main_in",
+					"query": "",
+					"scene": null
+				}
+			]
+		}
+	}
+}

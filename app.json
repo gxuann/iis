@@ -1,0 +1,53 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/main/main",
+    "pages/user/user",
+    "pages/addUser/addUser",
+    "pages/updateNotice/updateNotice",
+    "pages/addStore/addStore",
+    "pages/main_in/main_in",
+    "pages/main_out/main_out",
+    "pages/main_query/main_query",
+    "pages/main_add/main_add",
+    "pages/product_detail/product_detail",
+    "pages/opt_store/opt_store"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "",
+    "navigationBarTextStyle": "black"
+  },
+  "usingComponents": {
+    "vbutton": "/vantui/button/index",
+    "vpanel": "/vantui/panel/index",
+    "vfield": "/vantui/field/index",
+    "vcell": "/vantui/cell/index",
+    "van-cell-group": "/vantui/cell-group/index",
+    "van-icon": "/vantui/icon/index",
+    "van-toast": "/vantui/toast/index",
+    "van-popup": "/vantui/popup/index",
+    "van-picker": "/vantui/picker/index",
+    "van-notify": "/vantui/notify/index"
+  },
+  "tabBar": {
+    "color": "#333333",
+    "selectedColor": "#ff9623",
+    "list": [
+      {
+        "pagePath": "pages/main/main",
+        "text": "操作中心",
+        "iconPath": "images/opt.png",
+        "selectedIconPath": "images/opt_sel.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "个人中心",
+        "iconPath": "images/user.png",
+        "selectedIconPath": "images/user_sel.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,34 @@
+<!--index.wxml-->
+<view class="flex justify-center">
+  <image class="logo" src="../../images/logo.png"></image>
+</view>
+<view class="cu-progress round sm striped active">
+  <view class="bg-blueblue" style="width:100%"></view>
+</view>
+<view class="wel-text">欢迎使用库存管理信息系统，点击按钮以登陆/进入系统…</view>
+<view class="button-area">
+  <button wx:if="{{loginType==0}}" class="cu-btn bg-blueblue" open-type="getUserInfo" bindgetuserinfo="getUserInfo">用户登录</button>
+  <button wx:else="{{loginTpye==1}}" class="cu-btn bg-blueblue" bindtap="toMainPage">进入系统</button>
+</view>
+<view class="cu-capsule round help" bindtap="showModal" data-target="Modal">
+  <view class="cu-tag bg-blueblue">
+    <text class="icon-question"></text>
+  </view>
+  <view class="cu-tag line-blue">
+    帮助
+  </view>
+</view>
+<view class="cu-modal {{modalName=='Modal'?'show':''}}">
+  <view class="cu-dialog">
+    <view class="cu-bar bg-white justify-end">
+      <view class="content">账号登录</view>
+      <view class="action" bindtap="hideModal">
+        <text class="icon-close text-red"></text>
+      </view>
+    </view>
+    <view class="padding-xl">
+      请使用微信登录，如果这是您是第一次登录，请在个人中心绑定相关信息，绑定之后下次使用本系统便可直接进入系统，无需登录。如有疑问，请联系管理员。
+    </view>
+  </view>
+</view>
+<van-toast id="van-toast" />

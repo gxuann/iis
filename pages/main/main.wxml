@@ -1,0 +1,33 @@
+<!--pages/main/main.wxml-->
+<view wx:if="{{checkSta==1}}">
+  <van-notice-bar mode="closeable" left-icon="../../images/notice_bar.png" text="{{noticeText}}" bindtap="showModal" data-target="Modal"/>
+  <view class="frame-title">
+    <view class="title-name">操作中心</view>
+    <view class="title-text">在这里提供诸多功能来操作本库存管理系统，可以根据需要进入到对应功能的详情页中进行操作。</view>
+  </view>
+  <view class='nav-list'>
+    <navigator open-type="navigate" hover-class='none' url="/pages/{{item.name}}/{{item.name}}" class="nav-li bg-{{item.color}}" wx:for="{{elements}}" wx:key>
+      <view class="nav-title">{{item.title}}</view>
+      <van-icon class="icon" name="{{item.icon}}" size="50rpx" />
+    </navigator>
+  </view>
+  <view class="cu-modal {{modalName=='Modal'?'show':''}}">
+  <view class="cu-dialog">
+    <view class="cu-bar bg-white justify-end">
+      <view class="content">这里有一条新消息：</view>
+      <view class="action" bindtap="hideModal">
+        <van-icon name="cross" />
+      </view>
+    </view>
+    <view class="padding-xl">
+      {{noticeText}}
+    </view>
+  </view>
+</view>
+
+</view>
+<view wx:if="{{checkSta==0}}" class="warning">
+  <view class="warning-title">这里需要注意一条信息：</view>
+  <view class="line"></view>
+  <view class="warning-text">由于这是您第一次登陆本系统，在操作系统前，请先转至右边”个人中心“中绑定您的基本信息。</view>
+</view>

@@ -1,0 +1,25 @@
+/**app.wxss**/
+@import "colorui/main.wxss";
+.frame-title{
+  left: 5%;
+  color: #333333;
+  width: 90%;
+  margin: 50rpx 5% 5%;
+}
+.title-name{
+  font-size: 60rpx;
+  font-weight: bolder;
+}
+.title-text{
+  font-size: 25rpx;
+  margin-top: 10rpx;
+}
+.bold{
+  font-weight: bold;
+}
+.user-form-button{
+  position: absolute;
+  margin-top: 30rpx;
+  width: 80%;
+  left: 10%;
+}

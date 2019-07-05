@@ -1,0 +1,58 @@
+/**index.wxss**/
+@import "../../colorui/icon.wxss";
+
+page{
+  background-color: white;
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
+  height: 100%;
+}
+
+.logo{
+  margin-top: 200rpx;
+  margin-bottom: 100rpx;
+  border-radius: 50%;
+  height: 256rpx;
+  width: 256rpx;
+  box-shadow: 1rpx 1rpx 30rpx 20rpx #eaeaea;
+}
+.wel-text{
+  margin-top: 100rpx;
+  text-align: center;
+  font-size: 34rpx;
+  line-height: 50rpx;
+  color: rgb(98,98,100);
+}
+
+.button-area{
+  display: flex;
+  margin-top: 100rpx;
+  justify-content: center;
+}
+.padding{
+  padding: 10rpx;
+}
+
+.help{
+  position: absolute;
+  right: 50rpx;
+  bottom: 50rpx;
+}
+
+.or{
+  color: rgb(98,98,100);
+  text-align: center;
+  margin-top: 30rpx;
+}
+.underline{
+  margin-top: 10rpx;
+  font-size: 18rpx;
+  justify-content: space-around;
+  text-align: center;
+  color: rgb(98,98,100);
+}
+.text{
+  font-size: 20rpx;
+  border-bottom: 1rpx rgb(98,98,100) solid;
+}

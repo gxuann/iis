@@ -1,0 +1,6 @@
+/* pages/addUser/addUser.wxss */
+@import "../../colorui/icon.wxss";
+
+.res-user-info{
+  margin: 200rpx 25rpx auto;
+}

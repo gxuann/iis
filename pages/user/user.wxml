@@ -1,0 +1,50 @@
+<!--pages/user/user.wxml-->
+<view class="user-card">
+  <view class='user-info'>
+    <image class='user-head' mode='aspectFit' src="{{!!userInfo?userInfo.avatarUrl: '/images/unlogin.png'}}"></image>
+    <view class='user-name'>{{!!userInfo?userInfo.nickName:""}}</view>
+    <view class="user-name-1">您好，以下是您的信息:</view>
+  </view>
+  <view class="line"></view>
+  <view wx:if="{{checkSta==1}}" class="user-real-info">
+    <view>您好，你在系统内绑定的信息是：</view>
+    <view>姓名是： {{relName}}</view>
+    <view>工号为： {{num}}</view>
+  </view>
+  <view wx:if="{{checkSta==0}}" class="user-real-info">请先在填写下面的表格来绑定用户信息！</view>
+</view>
+<form wx:if="{{checkSta==0}}" bindsubmit="toBind">
+  <view class="cu-form-group">
+    <view class="title">姓名</view>
+    <input name="name" placeholder="请输入姓名" confirm-type="next" value="{{name}}"></input>
+  </view>
+  <view class="cu-form-group">
+    <view class="title">工号</view>
+    <input name="num" placeholder="请输入工号" type="number"  value="{{num}}"></input>
+  </view>
+  <button class="cu-btn block bg-orange margin-tb-sm user-form-button" form-type="submit">提交
+  </button>
+</form>
+<view class="pro-func" wx:if="{{adminSta==1 && checkSta==1}}">
+  <view class="pro-tip">-高级功能-</view>
+  <view class="pro-grid">
+    <view class="pro-grid-item" bindtap="proAddUser">
+      <van-icon name="manager-o" size="40rpx" />
+      <view>添加用户</view>
+    </view>
+    <view class="pro-grid-item" bindtap="proUpdateNotice">
+      <van-icon name="bullhorn-o" size="40rpx" />
+      <view>修改通知</view>
+    </view>
+    <view class="pro-grid-item" bindtap="proAddStore">
+      <van-icon name="plus" size="40rpx" />
+      <view>添加仓库</view>
+    </view>
+    <view class="pro-grid-item" bindtap="proMoreFunc">
+      <van-icon name="ellipsis" size="40rpx" />
+      <view>更多功能</view>
+    </view>
+  </view>
+</view>
+<van-notify id="custom-selector" />
+<van-toast id="van-toast" />

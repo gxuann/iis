@@ -1,0 +1,36 @@
+<!--pages/opt_store/opt_store.wxml-->
+<view class="frame-title">
+  <view class="title-name">{{titleSta}}操作</view>
+  <view class="title-text">在这里，可以进行{{titleSta}}操作，当前商品的库存信息以显示在下面的卡片中，请按照页面要求补全下方信息来完成{{titleSta}}操作。</view>
+</view>
+<view class="product-card">
+  <view class="align-center product-card-detail">
+    <view class="product-detail">
+      <view class="product-name">{{productDetail[0].name}}</view>
+      <view class="product-info">注册编号：{{productDetail[0].number}}</view>
+      <view class="product-info">厂家名称：{{productDetail[0].factory}}</view>
+      <view class="product-info">存储仓库：{{productDetail[0].repo}}</view>
+    </view>
+    <view class="product-store">
+      <view>当前库存</view>
+      <view class="store">{{productDetail[0].store}}</view>
+    </view>
+  </view>
+</view>
+<form wx:if="{{lastStoreSta==1}}" class="opt-form" bindsubmit="inOptSubmit">
+  <view class="cu-form-group">
+    <view class="title">数量</view>
+    <input name="store" placeholder="请输入数量" type="number" confirm-type="next"></input>
+  </view>
+  <button class="cu-btn block bg-olive margin-tb-sm user-form-button" form-type="submit">提交
+  </button>
+</form>
+<form wx:if="{{lastStoreSta==0}}" class="opt-form" bindsubmit="outOptSubmit">
+  <view class="cu-form-group">
+    <view class="title">数量</view>
+    <input name="store" placeholder="请输入数量" type="number" confirm-type="next"></input>
+  </view>
+  <button class="cu-btn block bg-green margin-tb-sm user-form-button" form-type="submit">提交
+  </button>
+</form>
+<van-notify id="custom-selector" />

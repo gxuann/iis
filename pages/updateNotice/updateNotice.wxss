@@ -1,0 +1,20 @@
+/* pages/updateNotice/updateNotice.wxss */
+@import "../../colorui/icon.wxss";
+.frame-title{
+  left: 5%;
+  color: #333333;
+  width: 90%;
+  margin: 50rpx 5% 5%;
+}
+.title-name{
+  font-size: 60rpx;
+  font-weight: bolder;
+}
+.title-text{
+  font-size: 25rpx;
+  margin-top: 10rpx;
+}
+
+.res-user-info{
+  margin: 200rpx 25rpx auto;
+}
